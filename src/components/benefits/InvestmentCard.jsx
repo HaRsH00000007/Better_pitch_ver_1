@@ -34,14 +34,15 @@ export default function InvestmentCard({ isFront = false, onClick }) {
 
       {/* Financial Investment Vector Art */}
       <div className="relative z-10 w-full h-[180px] sm:h-[195px] flex items-end justify-end pointer-events-none pr-4 pb-2">
-        <svg width="220" height="160" viewBox="0 0 220 160" fill="none">
-          {/* Upward Growth Curve */}
+        <svg width="220" height="160" viewBox="0 0 220 160" fill="none" className="overflow-visible">
+          {/* Upward Growth Curve with Animated Dash Flow */}
           <path 
             d="M20,130 C60,125 90,80 140,70 C170,64 185,35 205,25" 
             stroke="#0284C7" 
             strokeWidth="3.5" 
             strokeLinecap="round" 
-            strokeDasharray="4 2"
+            strokeDasharray="6 3"
+            className="animate-dash-flow"
           />
           {/* Glowing Area under Curve */}
           <path 
@@ -56,8 +57,8 @@ export default function InvestmentCard({ isFront = false, onClick }) {
             </linearGradient>
           </defs>
 
-          {/* Flying Banknotes / Cash Layer 1 */}
-          <g transform="translate(110, 45) rotate(-12)">
+          {/* Flying Banknotes / Cash Layer 1 with Gentle Float Animation */}
+          <g transform="translate(110, 45) rotate(-12)" className="animate-float-slow transition-transform">
             <rect x="0" y="0" width="70" height="42" rx="6" fill="#DBEAFE" stroke="#1E1B4B" strokeWidth="2.2" />
             <circle cx="35" cy="21" r="10" fill="#93C5FD" stroke="#1E1B4B" strokeWidth="1.8" />
             <text x="35" y="25" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#1E1B4B" fontFamily="sans-serif">$</text>
@@ -67,15 +68,15 @@ export default function InvestmentCard({ isFront = false, onClick }) {
             <circle cx="62" cy="34" r="2.5" fill="#1E1B4B" />
           </g>
 
-          {/* Flying Banknotes / Cash Layer 2 (Angled) */}
-          <g transform="translate(135, 20) rotate(15)">
+          {/* Flying Banknotes / Cash Layer 2 (Angled) with Inverse Float Animation */}
+          <g transform="translate(135, 20) rotate(15)" className="animate-float-reverse transition-transform">
             <rect x="0" y="0" width="65" height="38" rx="5" fill="#FFFFFF" stroke="#1E1B4B" strokeWidth="2.2" />
             <circle cx="32" cy="19" r="9" fill="#60A5FA" stroke="#1E1B4B" strokeWidth="1.6" />
             <text x="32" y="23" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#FFFFFF" fontFamily="sans-serif">$</text>
           </g>
 
-          {/* Growth Pill Badge */}
-          <g transform="translate(30, 80)">
+          {/* Growth Pill Badge with Pulse Scale */}
+          <g transform="translate(30, 80)" className="hover:scale-105 transition-transform duration-300">
             <rect x="0" y="0" width="85" height="32" rx="16" fill="#FFFFFF" stroke="#1E1B4B" strokeWidth="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.06))" />
             <circle cx="16" cy="16" r="10" fill="#0284C7" />
             <path d="M13,18 L16,13 L19,18" stroke="#FFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />

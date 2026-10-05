@@ -33,20 +33,22 @@ export default function FinanceCard({ isFront = false, onClick }) {
 
       {/* Financial Vector Art: Cogwheel, Clock Dial, Credit Card */}
       <div className="relative z-10 w-full h-[180px] sm:h-[195px] flex items-end justify-end pointer-events-none pr-4 pb-2">
-        <svg width="220" height="160" viewBox="0 0 220 160" fill="none">
-          {/* Black Cogwheel / Gear */}
+        <svg width="220" height="160" viewBox="0 0 220 160" fill="none" className="overflow-visible">
+          {/* Black Cogwheel / Gear with Subtle Rotation */}
           <g transform="translate(140, 20)">
-            {/* Gear teeth */}
-            <path 
-              d="M30,5 L36,5 L38,12 L44,14 L50,9 L54,14 L50,20 L52,26 L59,28 L59,34 L52,36 L50,42 L55,47 L50,52 L44,48 L38,50 L36,57 L30,57 L28,50 L22,48 L17,53 L12,48 L16,42 L14,36 L7,34 L7,28 L14,26 L16,20 L11,15 L16,10 L22,14 L28,12 Z" 
-              fill="#18181B" 
-            />
-            {/* Gear Center Hole */}
-            <circle cx="33" cy="31" r="10" fill="#FFF2EB" />
+            <g style={{ transformOrigin: '33px 31px' }} className="animate-spin-slow">
+              {/* Gear teeth */}
+              <path 
+                d="M30,5 L36,5 L38,12 L44,14 L50,9 L54,14 L50,20 L52,26 L59,28 L59,34 L52,36 L50,42 L55,47 L50,52 L44,48 L38,50 L36,57 L30,57 L28,50 L22,48 L17,53 L12,48 L16,42 L14,36 L7,34 L7,28 L14,26 L16,20 L11,15 L16,10 L22,14 L28,12 Z" 
+                fill="#18181B" 
+              />
+              {/* Gear Center Hole */}
+              <circle cx="33" cy="31" r="10" fill="#FFF2EB" />
+            </g>
           </g>
 
-          {/* Orange Clock Dial */}
-          <g transform="translate(160, 48)">
+          {/* Orange Clock Dial with Gentle Pulse */}
+          <g transform="translate(160, 48)" className="animate-gentle-pulse">
             <circle cx="30" cy="30" r="28" fill="#FFEDD5" stroke="#FF5C28" strokeWidth="3" />
             <circle cx="30" cy="30" r="2.5" fill="#18181B" />
             {/* Clock hands */}
@@ -59,14 +61,14 @@ export default function FinanceCard({ isFront = false, onClick }) {
             <circle cx="7" cy="30" r="1.5" fill="#FF5C28" />
           </g>
 
-          {/* Modern FinTech Card / Invoice Slip */}
-          <g transform="translate(40, 60) rotate(-6)">
+          {/* Modern FinTech Card / Invoice Slip with Float Animation */}
+          <g transform="translate(40, 60) rotate(-6)" className="animate-float-slow transition-transform">
             <rect x="0" y="0" width="115" height="70" rx="10" fill="#FFFFFF" stroke="#18181B" strokeWidth="2.2" filter="drop-shadow(0 6px 12px rgba(0,0,0,0.06))" />
             {/* Card chip */}
             <rect x="14" y="14" width="16" height="12" rx="2" fill="#FED7AA" stroke="#18181B" strokeWidth="1.2" />
             {/* Contactless wave */}
-            <path d="M38,18 C40,20 40,23 38,25" stroke="#18181B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-            <path d="M42,15 C45,19 45,24 42,28" stroke="#18181B" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+            <path d="M38,18 C40,20 40,23 38,25" stroke="#18181B" strokeWidth="1.5" strokeLinecap="round" fill="none" className="animate-pulse" />
+            <path d="M42,15 C45,19 45,24 42,28" stroke="#18181B" strokeWidth="1.5" strokeLinecap="round" fill="none" className="animate-pulse" />
             {/* Card number lines */}
             <rect x="14" y="38" width="40" height="3" rx="1.5" fill="#CBD5E1" />
             <rect x="60" y="38" width="25" height="3" rx="1.5" fill="#CBD5E1" />
